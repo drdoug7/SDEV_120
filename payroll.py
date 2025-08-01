@@ -41,7 +41,7 @@ for tries_left in range(MAX_TRIES, 0, -1):
     try:
         emp_id = int(input("Enter your employee ID: "))
     except ValueError:
-        print("Invalid input. Numbers only. {tries_left - 1} attempt(s) left.")
+        print(f"Invalid input. Numbers only. {tries_left - 1} attempt(s) left.")
         if tries_left - 1 == 0:
             print("Too many failed attempts. Exiting.")
             connection.close()
@@ -54,7 +54,7 @@ for tries_left in range(MAX_TRIES, 0, -1):
         break
     else:
         if tries_left - 1:
-            print("ID not found. {tries_left - 1} attempt(s) left.")
+            print(f"ID not found. {tries_left - 1} attempt(s) left.")
         else:
             print("Too many failed attempts. Exiting.")
             connection.close()
@@ -74,7 +74,7 @@ for tries_left in range(MAX_TRIES, 0, -1):
         break
     else:
         if tries_left - 1:
-            print("Wrong password. {tries_left - 1} attempt(s) left.")
+            print(f"Wrong password. {tries_left - 1} attempt(s) left.")
         else:
             print("Too many failed attempts. Exiting.")
             connection.close()
